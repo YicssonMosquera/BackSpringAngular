@@ -1,0 +1,12 @@
+rootProject.name = 'back'
+include 'application:app-service'
+findProject(':application:app-service')?.name = 'app-service'
+include 'domain:model'
+findProject(':domain:model')?.name = 'model'
+include 'domain:usecase'
+findProject(':domain:usecase')?.name = 'usecase'
+include 'infraestructure:driven-adapters:jpa-repository'
+findProject(':infraestructure:driven-adapters:jpa-repository')?.name = 'jpa-repository'
+include 'infraestructure:entry-points:reactive-web'
+findProject(':infraestructure:entry-points:reactive-web')?.name = 'reactive-web'
+
